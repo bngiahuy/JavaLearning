@@ -13,7 +13,8 @@ public class ErrorsExample {
             int[] numbers = {1, 2, 3};
             System.out.println(numbers[5]); // This will throw an ArrayIndexOutOfBoundsException
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Caught a runtime error: " + e.getMessage());
+            System.err.println("Caught a runtime error: " + e.getMessage());
+            throw new RuntimeException("Array index out of bounds!"); // This will throw a runtime exception
         }
 
         // Example of a logical error
